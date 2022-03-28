@@ -15,7 +15,9 @@ app.use(express.json({ limit: '25mb' }));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-
+app.use("/", (req, res) => {
+    res.send("This is social Media")
+})
 
 //routes
 app.use('/api/users/', usersRoute)
